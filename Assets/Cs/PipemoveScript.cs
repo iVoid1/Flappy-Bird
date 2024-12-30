@@ -17,10 +17,12 @@ public class PipemoveScript : MonoBehaviour
         
         transform.position = transform.position + (Vector3.left * Logic.pipeSpeed) * Time.deltaTime;
 
-        if (transform.position.x < deadZone || Logic.pipeSpeed <= 0)
-        {
-            Destroy(gameObject);
-        }
+
+        // Removed cuz it's no no good
+        // if (transform.position.x < deadZone || Logic.pipeSpeed <= 0)
+        // {
+        //     Destroy(gameObject);
+        // }
     }
 
 }

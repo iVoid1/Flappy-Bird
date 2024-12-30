@@ -88,12 +88,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 300831155761737562}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec9ea6e21215ba8459946a7c16812772, type: 3}
+  m_Script: {fileID: 11500000, guid: d80f97528ba31dd45aa199b2e34a7c51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Logic: {fileID: 0}
-  PipMove: {fileID: 0}
-  multiplyer: 1
   scoreAdd: 1
 --- !u!1 &906642399622062308
 GameObject:
@@ -139,10 +136,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 906642399622062308}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c90dc61c0589e674984e9df5c941dbd8, type: 3}
+  m_Script: {fileID: 11500000, guid: 9dcc9f77ae0e455418ec0c1cffee99b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pipeSpeed: 6
   deadZone: -40
 --- !u!1 &3960071509868676779
 GameObject:
@@ -221,7 +217,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -8634368658134348540, guid: 676eaff41007a604084269882c35505f, type: 3}
+  m_Sprite: {fileID: -8634368658134348540, guid: 3328f8fb44474b64ba8e525175419e56, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -355,7 +351,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -8634368658134348540, guid: 676eaff41007a604084269882c35505f, type: 3}
+  m_Sprite: {fileID: -8634368658134348540, guid: 3328f8fb44474b64ba8e525175419e56, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

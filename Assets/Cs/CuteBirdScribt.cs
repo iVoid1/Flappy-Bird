@@ -2,59 +2,56 @@
 // using Unity.VisualScripting.FullSerializer;
 using UnityEngine;
 using System.Collections;
+using NUnit.Framework;
 
 public class CuteBirdScribt : MonoBehaviour
 {
-    public Rigidbody2D myRigidbody2D;
+    public float FlapStrength;
+    private Rigidbody2D rb;
     public Logicmangar Logic;
-    public float FlapStrengh;
-    public bool canPlay = true;
-    private bool FristJump = true;
-    private float secrt;
+    private bool canPlay = true;
+    private bool FirstJump = true;
+    private float secret;
 
     void Start()
     {
-        Logic.MainMenu.gameObject.SetActive(true);
-        secrt = Logic.pipeSpeed;
+        rb = GetComponent<Rigidbody2D>();
+        // Logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<Logicmangar>();
+        secret = Logic.pipeSpeed;
     }
 
     void Update()
-    {
-        if (Logic.MainMenu.IsActive())
-        {
-            transform.position = Vector3.zero;
-            Logic.pipeSpeed = 0;
-        }
-
-        else
-        {   if (FristJump)
+    { 
+        if (FirstJump)
             {
-                myRigidbody2D.linearVelocity = Vector2.up * FlapStrengh;
-                Logic.pipeSpeed = secrt;
-                FristJump = false;
+                rb.linearVelocity = Vector2.up * FlapStrength;
+                Logic.pipeSpeed = secret;
+                FirstJump = false;
             }
-        }
 
-        if (Input.GetKeyDown(KeyCode.Space) && canPlay && !Logic.MainMenu.IsActive())
+
+        if (Input.GetKeyDown(KeyCode.Space) && canPlay)
         {
-            myRigidbody2D.linearVelocity = Vector2.up * FlapStrengh;
+            rb.linearVelocity = Vector2.up * FlapStrength;
         }       
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if (collision.gameObject.tag.Equals("Top")){
+            return;
+        }
         Logic.GameOverScreen();
         canPlay = false;
-        StartCoroutine(SlowDownPipeSpeed()); // تشغيل Coroutine
-    }
+        StartCoroutine(SlowDownPipeSpeed());
 
     IEnumerator SlowDownPipeSpeed()
     {
-        while (Logic.pipeSpeed > 0) // طالما السرعة أكبر من 0
+        while (Logic.pipeSpeed > 0)
         {
-            Logic.pipeSpeed -= Time.deltaTime * 5; // قلل السرعة تدريجيًا
-            yield return null; // انتظر الإطار التالي قبل المتابعة
+            Logic.pipeSpeed -= Time.deltaTime * 5;
+            yield return null;
         }
     
     }
-}
+    }}

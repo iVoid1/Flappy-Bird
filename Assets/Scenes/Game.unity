@@ -1202,7 +1202,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 9245239}
         m_TargetAssemblyTypeName: Logicmangar, Assembly-CSharp
         m_MethodName: restartGame
         m_Mode: 1

@@ -10,11 +10,10 @@ public class Logicmangar : MonoBehaviour
 {   
     public Text scoreText;
     public GameObject GameOver;
-    public Text MainMenu;
-    public bool MenuActive = true;
     public int playerScore = 0;
     public int multiplyer = 1;
     public float pipeSpeed;
+    public bool gameOver = false;
 
 
     [ContextMenu("Increes Score")]
@@ -29,16 +28,9 @@ public class Logicmangar : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-    public void StartGame()
-    {
-        MainMenu.gameObject.SetActive(false);
-        scoreText.gameObject.SetActive(true);
-        MenuActive = false;
-
-    }
-
     public void GameOverScreen()
     {
         GameOver.SetActive(true);
+        gameOver = true;
     }
 }

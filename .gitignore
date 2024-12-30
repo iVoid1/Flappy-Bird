@@ -1,0 +1,13 @@
+build/
+Build/
+Library/
+library/
+obj/
+Obj/
+Logs/
+logs/
+ProjectSettings/
+UserSettings/
+temp/
+Temp/
+*.meta

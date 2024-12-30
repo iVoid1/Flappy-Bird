@@ -36,6 +36,7 @@ public class PipeSpawner : MonoBehaviour
         }
         
     }
+    //to spawn
     void SpawnPipes()
     {
         float highestPoint = transform.position.y + pipeOffsit;

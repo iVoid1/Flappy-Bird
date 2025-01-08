@@ -19,10 +19,11 @@ public class PipemoveScript : MonoBehaviour
 
 
         // Removed cuz it's no no good
-        // if (transform.position.x < deadZone || Logic.pipeSpeed <= 0)
-        // {
-        //     Destroy(gameObject);
-        // }
+        // if you remove it gameObject will stay in game forever
+        if (transform.position.x < deadZone || Logic.pipeSpeed <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
 }

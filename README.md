@@ -1,2 +1,2 @@
 # Fendi Bird
-## big Game with COol features
+## big Game with nO features
